@@ -9,21 +9,25 @@ module.exports = {
 			// => @media (max-width: 1279px) { ... }
 			xls: { max: '1300px' },
 
-			lg: { max: '1282px' },
+			lg: { max: '1280px' },
 			// => @media (max-width: 1023px) { ... }
-			lg_min: '1282px',
+			lg_min: '1280px',
 
-			md: { max: '992px' },
+			md: { max: '1000px' },
 			// => @media (max-width: 767px) { ... }
-			md_min: '992px',
+			md_min: '1000px',
 
-			sm: { max: '639px' },
+			sm: { max: '750px' },
 			// => @media (max-width: 639px) { ... }
-			sm_min: '639px',
-
-			xs: { max: '375px' },
+			sm_min: '750px',
+			
+			xs: { max: '500px' },
 			// => @media (max-width: 375px) { ... }
-			xs_min: '375px',
+			xs_min: '500px',
+
+			xxs: { max: '320px' },
+			// => @media (max-width: 375px) { ... }
+			xxs_min: '320px',
 
 			def: '1110px',
 		},
