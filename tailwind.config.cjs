@@ -8,9 +8,10 @@ module.exports = {
 			xl: { max: '1921px' },
 			// => @media (max-width: 1279px) { ... }
 			xls: { max: '1300px' },
-			lg: { max: '1200px' },
+
+			lg: { max: '1282px' },
 			// => @media (max-width: 1023px) { ... }
-			lg_min: '1200px',
+			lg_min: '1282px',
 
 			md: { max: '992px' },
 			// => @media (max-width: 767px) { ... }
@@ -19,6 +20,10 @@ module.exports = {
 			sm: { max: '639px' },
 			// => @media (max-width: 639px) { ... }
 			sm_min: '639px',
+
+			xs: { max: '375px' },
+			// => @media (max-width: 375px) { ... }
+			xs_min: '375px',
 
 			def: '1110px',
 		},
@@ -29,24 +34,34 @@ module.exports = {
 				'color-c': '#CEFFCE', //!secondary
 				'color-d': '#5AFF15',
 				'color-e': '#032D3C', 
-				'color-f': '', 
-				'color-g': '', 
-				'color-h': '',
-				'color-i': '',
-				'color-j': '', 
-		
+				'color-f': '#FAFFFA', 
+				'color-g': '#B9B9B9', 
+				'color-h': '#626262',
+				'color-i': '#FFF3FF',
+				'color-j1': '#FEEFEA', 
+				'color-j2': '#FFF3FF',
+				'color-j3': '#F2FCE4',
+				'color-j4': '#ECFFEC',
+				'color-j5': '#FFFAE0',
+				'color-j6': '#DEF9EC',
+
 				'color-bg': '#FFFFFF',
-				'color-bg-second': '',
+				'color-bg-second': '#EDFBED',
 				base: '#000',
 				
 			},
+			borderRadius: {
+				base: rem(15),
+			},
 			fontSize: {
-				xs: rem(12),
-				sm: rem(14),
-				base: rem(16),
+				xs: rem(6),
+				'xs1': rem(10),
+				sm: rem(12),
+				base: rem(15),
 				lg: rem(20),
-				xl: rem(24),
-				'2xl': rem(32),
+				'lg1': rem(25),
+				xl: rem(40),
+				'2xl': rem(35),
 				'3xl': rem(38),
 				'4xl': rem(40),
 				'5xl': rem(56),
@@ -54,60 +69,64 @@ module.exports = {
 			btnSize: {
 				'xs-x': rem(100),
 				'xs-y': rem(50),
-				'sm-x': rem(150),
-				'sm-y': rem(50),
-				'base-x': rem(200),
-				'base-y': rem(16),
+				'sm-x': rem(110),
+				'sm-y': rem(29),
+				'base-x': rem(161),
+				'base-y': rem(39),
 				'lg-x': rem(250),
 				'lg-y': rem(50),
 				'xl-x': rem(300),
 				'xl-y': rem(50),
-				'2xl-x': rem(400),
-				'2xl-y': rem(22),
-				'3xl-x': rem(22),
-				'3xl-y': rem(22),
+				'2xl-x': rem(245),
+				'2xl-y': rem(60),
+				'3xl-x': rem(200),
+				'3xl-y': rem(44),
 				'4xl-x': rem(22),
 				'4xl-y': rem(22),
 				'5xl-x': rem(22),
 				'5xl-y': rem(22),
 			},
 			iconSize: {
-				xs: rem(12),
+				xs: rem(20),
 				sm: rem(14),
-				base: rem(20),
+				base: rem(114),
 				lg: rem(25),
-				xl: rem(40),
-				'2xl': rem(32),
-				'3xl': rem(38),
-				'4xl': rem(40),
+				xl: rem(45),
+				'1xl': rem(35),
+				'2xl': rem(127),
+				'3xl': rem(74),
+				'4xl': rem(8),
 				'5xl': rem(56),
 			},
 		},
 	},
+
 	plugins: [
 		plugin(function ({ addBase, addComponents, addUtilities, theme }) {
 			addBase({
 				h1: {
-					fontSize: theme('fontSize.2xl'),
+					fontSize: theme('fontSize.xl'),
+					
 				},
 				h2: {
-					fontSize: theme('fontSize.xl'),
+					fontSize: theme('fontSize.2xl'),
 				},
 			})
 			addComponents({
 				//! Shared
 				'.btn': {
 					fontSize: theme('fontSize.base'),
-					fontWeight: theme('fontWeight.semibold'),
-					gap: rem(10),
-					borderRadius: rem(10),
+					// fontWeight: theme('fontWeight.semibold'),
+					// gap: rem(10),
+					borderRadius: rem(14),
 					borderWidth: rem(1),
 					transition: '0.3s all',
 
-					'.icon': {
-						width: theme('iconSize.base'),
-						height: theme('iconSize.base'),
-						'@media (max-width: 1279px)': {
+					'&-icon': {
+						width: theme('iconSize.1xl'),
+						height: theme('iconSize.1xl'),
+						borderRadius: rem(100),
+						'@media (max-width: 639px)': {
 							width: theme('iconSize.xs'),
 							height: theme('iconSize.xs'),
 						},
@@ -118,8 +137,8 @@ module.exports = {
 					// 	fontSize: theme('fontSize.xs'),
 					// 	padding: rem(10),
 					// },
-					width: theme('btnSize.base-x'),
-					minHeight: theme('btnSize.base-y'),
+					// width: theme('btnSize.base-x'),
+					// minHeight: theme('btnSize.base-y'),
 					// height: '100%',
 					display: 'flex',
 					alignItems: 'center',
@@ -128,63 +147,63 @@ module.exports = {
 					borderColor: theme('colors.transparent'),
 
 					'&-color-a': {
-						fill: theme('colors.color-bg-second'),
-						color: theme('colors.color-c'),
-						background: theme('colors.color-bg-second'),
-						borderColor: theme('colors.color-j'),
+						fill: theme('colors.color-a'),
+						color: theme('colors.color-bg'),
+						background: theme('colors.color-a'),
+						// borderColor: theme('colors.color-j'),
 						'&:hover': {
 							fill: theme('colors.color-bg-second'),
-							color: theme('colors.color-a'),
-							background: theme('colors.white'),
-							borderColor: theme('colors.color-a'),
+							color: theme('colors.color-bg'),
+							background: theme('colors.color-d'),
+							// borderColor: theme('colors.color-a'),
 						},
 					},
 					'&-color-b': {
 						fill: theme('colors.base'),
-						color: theme('colors.color-bg-second'),
-						background: theme('colors.color-b'),
-						borderColor: theme('colors.color-b'),
+						color: theme('colors.color-e'),
+						background: theme('colors.color-bg'),
+						borderColor: theme('colors.color-a'),
 						'&:hover': {
 							fill: theme('colors.color-b'),
-							color: theme('colors.color-b'),
+							color: theme('colors.color-e'),
 							background: theme('colors.white'),
-							borderColor: theme('colors.color-b'),
+							borderColor: theme('colors.color-d'),
 						},
 					},
 					'&-color-c': {
 						fill: theme('colors.base'),
-						color: theme('colors.base'),
-						background: theme('colors.color-c'),
-						borderColor: theme('colors.color-c'),
+						color: theme('colors.color-e'),
+						background: theme('colors.color-bg'),
+						borderColor: theme('colors.color-a'),
 						'&:hover': {
-							fill: theme('colors.color-c'),
-							color: theme('colors.color-c'),
-							background: theme('colors.white'),
-							borderColor: theme('colors.color-c'),
+							fill: theme('colors.color-b'),
+							color: theme('colors.white'),
+							background: theme('colors.color-a'),
+							borderColor: theme('colors.color-a'),
 						},
 					},
 					'&-color-d': {
 						fill: theme('colors.base'),
-						color: theme('colors.base'),
-						background: theme('colors.color-d'),
-						borderColor: theme('colors.color-d'),
+						color: theme('colors.color-e'),
+						background: theme('colors.color-bg-second'),
+						borderColor: theme('colors.color-a'),
 						'&:hover': {
-							fill: theme('colors.black'),
-							color: theme('colors.black'),
-							background: theme('colors.color-e'),
-							borderColor: theme('colors.color-e'),
+							fill: theme('colors.color-b'),
+							color: theme('colors.base'),
+							background: theme('colors.base'),
+							borderColor: theme('colors.color-a'),
 						},
 					},
 					'&-color-e': {
-						fill: theme('colors.base'),
-						color: theme('colors.base'),
-						background: theme('colors.color-e'),
-						borderColor: theme('colors.color-e'),
+						fill: theme('colors.white'),
+						color: theme('colors.color-a'),
+						background: theme('colors.white'),
+						borderColor: theme('colors.white'),
 						'&:hover': {
-							fill: theme('colors.color-e'),
-							color: theme('colors.color-e'),
+							fill: theme('colors.color-a'),
+							color: theme('colors.color-a'),
 							background: theme('colors.white'),
-							borderColor: theme('colors.color-e'),
+							borderColor: theme('colors.color-a'),
 						},
 					},
 					'&-color-f': {
@@ -223,8 +242,10 @@ module.exports = {
 					},
 					'&-sm': {
 						fontSize: theme('fontSize.base'),
-						width: theme('btnSize.sm-x'),
+						// width: theme('btnSize.sm-x'),
 						height: theme('btnSize.sm-y'),
+						borderRadius: rem(9),
+
 						'.icon': {
 							width: theme('iconSize.sm'),
 							height: theme('iconSize.sm'),
@@ -258,7 +279,7 @@ module.exports = {
 						},
 					},
 					'&-3xl': {
-						fontSize: theme('fontSize.3xl'),
+						fontSize: theme('fontSize.base'),
 						width: theme('btnSize.3xl-x'),
 						height: theme('btnSize.3xl-y'),
 						'.icon': {
@@ -380,7 +401,7 @@ module.exports = {
 				},
 
 				'.shadow-base': {
-					boxShadow: '0px 0px 13.6px -3.6px rgba(50, 205, 50, 0.16);',
+					boxShadow: '0px 0px 14px -4px rgba(50, 205, 50, 0.34);',
 				},
 				//!Position
 				'.flex-c': {

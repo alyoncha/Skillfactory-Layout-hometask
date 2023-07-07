@@ -1,3 +1,121 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+* {
+  box-sizing: border-box;
+  outline: none;
+  color: #032D3C;
+  letter-spacing: 0;
+  ::selection {
+    background: #ffea7d;
+  }
+}
+@media (min-width: 1921px) {
+  html {
+    font-size: 0.8206vw !important;
+  }
+}
+@media (min-width: 1300px) {
+    .container {
+      max-width: none;
+    }
+  }
+
+@media (max-width: 639px) {
+  .diet-fiter__change{
+    width: 7.5rem;
+    height: 1.5625rem;
+    margin-top: 0.6875rem;
+    font-size: 10px;
+    border-radius: 0.3125rem;
+    padding-left: 9px;
+    background-position: 93px;
+  }
+}
+html,
+body {
+  width: 100%;
+  // height: 100%;
+  font-family: 'Jost';
+  font-weight: 600;
+  line-height: 1.18;
+//   letter-spacing: 0.1em;
+  color: #032D3C;
+  position: relative;
+  scroll-behavior: smooth;
+}
+input {
+  background-repeat: no-repeat; 
+  outline: none;
+  border-radius: 13px;
+  color: #D2D2D2;
+  font-size: 13.487px;
+  font-family: Monrserrat;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.category-block__content{
+  text-align: -webkit-center;
+}
+.diagonal-gradient {
+  background: linear-gradient(to bottom right, #5AFF15, #2BD913, #32CD32);
+}
+.diagonal-gradient-border {
+  border-color: linear-gradient(to bottom right, #5AFF15, #2BD913, #32CD32);
+}
+.fifth-section__gradient {
+  background: linear-gradient(89deg, #03161B 0%, rgba(0, 0, 0, 0.65) 45.36%, rgba(3, 22, 27, 0.00) 100%);
+  filter: blur(26.46869659423828px);
+}
+
+
+// !Fonts
+//... Monrserrat ...
+@font-face {
+    src: url('assets/fonts/Monrserrat/static/Montserrat-Regular.woff2') format('woff2'),
+      url('assets/fonts/Monrserrat/static/Montserrat-Regular.ttf') format('ttf'),
+      url('assets/fonts/Monrserrat/static/Montserrat-Regular.woff') format('woff');
+    font-family: 'Monrserrat';
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    src: url('assets/fonts/Monrserrat/static/Montserrat-Medium.woff2') format('woff2'),
+      url('assets/fonts/Monrserrat/static/Montserrat-Medium.ttf') format('ttf'),
+      url('assets/fonts/Monrserrat/static/Montserrat-Medium.woff') format('woff');
+    font-family: 'Monrserrat';
+    font-weight: 500;
+    font-display: swap;
+  }
+  
+  @font-face {
+    src: url('assets/fonts/Monrserrat/static/Montserrat-SemiBold.woff2') format('woff2'),
+      url('assets/fonts/Monrserrat/static/Montserrat-SemiBold.ttf') format('ttf'),
+      url('aassets/fonts/c/static/Montserrat-SemiBold.woff') format('woff');
+    font-family: 'Jost';
+    font-weight: 700;
+    font-display: swap;
+  }
+
+  //... Jost ...
+  @font-face {
+    src: url('assets/fonts/Jost/static/Jost-Medium.woff2') format('woff2'),
+      url('assets/fonts/Jost/static/Jost-Medium.ttf') format('ttf'),
+      url('assets/fonts/Jost/static/Jost-Medium.woff2') format('woff');
+    font-family: 'Jost';
+    font-weight: 500;
+    font-display: swap;
+  }
+  
+  @font-face {
+    src: url('assets/fonts/Jost/static/Jost-SemiBold.woff2') format('woff2'),
+      url('assets/fonts/Jost/static/Jost-SemiBold.ttf') format('ttf'),
+      url('assets/fonts/Jost/static/Jost-SemiBold.woff') format('woff');
+    font-family: 'Jost';
+    font-weight: 700;
+    font-display: swap;
+  }
