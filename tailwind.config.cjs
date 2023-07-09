@@ -130,7 +130,7 @@ module.exports = {
 						width: theme('iconSize.1xl'),
 						height: theme('iconSize.1xl'),
 						borderRadius: rem(100),
-						'@media (max-width: 639px)': {
+						'@media (max-width: 750px)': {
 							width: theme('iconSize.xs'),
 							height: theme('iconSize.xs'),
 						},
@@ -194,7 +194,7 @@ module.exports = {
 						'&:hover': {
 							fill: theme('colors.color-b'),
 							color: theme('colors.base'),
-							background: theme('colors.base'),
+							background: theme('colors.color-a'),
 							borderColor: theme('colors.color-a'),
 						},
 					},
