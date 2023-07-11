@@ -31,6 +31,13 @@
     padding-left: 9px;
   }
 }
+
+@media(max-width: 1000px) {
+  .header.open .burger-menu{
+    transform: translateX(100%);
+  }
+}
+
 html,
 body {
   width: 100%;
@@ -68,7 +75,13 @@ input {
   background: linear-gradient(89deg, #03161B 0%, rgba(0, 0, 0, 0.65) 45.36%, rgba(3, 22, 27, 0.00) 100%);
   filter: blur(26.46869659423828px);
 }
-
+.menu__link:hover .menu__arrow {
+  display: block;
+}
+.menu__link:hover .menu__link-text {
+  color:#2BD913;
+  text-decoration: underline;
+}
 
 // !Fonts
 //... Monrserrat ...

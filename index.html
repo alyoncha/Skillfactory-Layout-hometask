@@ -10,7 +10,7 @@
 		<title>uhujhhu</title>
 	</head>
 
-	<body >
+	<body>
 		<header class="header flex-c text-color-e font-medium font-['Monrserrat'] ">
 			<div class="container flex-c flex-col w-[76rem] lg:w-[61rem] md:w-[45rem]  sm:w-[28rem] xs:w-[19rem] xxs:w-[17rem] ">
 				<div class="header__top h-[3.9375rem] w-full flex-sb">
@@ -28,14 +28,85 @@
 						</a>
 					</div>
 					<div class="header__right flex-sb w-[3.8125rem]">
-						<a href="" class="profile h-[1.4375rem] w-[1.4375rem] md_min:hidden ml-auto flex-shrink-0">
-							<img src="dist\svg\Menu-panel.svg" alt="" class="menu-image w-full h-full ">
-						</a>
-						<a href="" class="profile h-[1.4375rem] w-[1.4375rem] md:hidden flex-shrink-0">
-							<img src="dist\svg\profile.svg" alt="" class="profile-image w-full h-full md:hidden">
+						<button class="Menu-panel h-[1.4375rem] w-[1.4375rem] md_min:hidden ml-auto flex-shrink-0 relative" id="menu-panel">
+							<img src="dist\svg\Menu-panel.svg" alt="" class="menu-image w-full h-full">
+						</button>
+						<div class="burger-menu absolute -left-[18.875rem] top-0 z-10 h-full w-[18.875rem] bg-color-e transition-transform">
+							<div class="burger-menu__content pt-[1.75rem] px-[1.5rem]">
+								<div class="burger-container w-[15.875rem]">
+									<div class="burger-menu__top">
+										<button class="burger-menu__close ml-[14.4rem] w-[1.875rem] h-[1.875rem]" id="menu-panel-close">
+											<img src="dist\svg\cross.svg" alt="" class="burger-menu__close-icon">
+										</button>
+										<input type="text" class="fourth-section__input w-[14.75rem] h-[2.1875rem] border border-color-g bg-[url('dist/svg/search1.svg')] bg-[1.25rem] pl-[2.75rem] mt-[1.625rem]" placeholder="Поиск">
+										<a href="" class="burger-menu__link border-b flex items-center border-color-g w-full mt-[1.5625rem]">
+											<div  class="burger-menu__icon w-[1rem] h-[1rem] flex-shrink-0 mr-[0.9375rem]">
+												<img src="dist\svg\location2.svg" alt="" class="w-full h-full">
+											</div>
+											<p class="burger-menu__link-text py-[0.6rem] font-['Monrserrat'] font-medium text-[0.9375rem] text-white">Выбрать город</p>
+										</a>
+									</div>
+					
+									<div class="burger-menu__center mt-[3.4375rem] flex-c flex-col gap-[0.625rem]">
+										<a href="" class="burger-menu__link border-b flex-sb items-center border-color-g w-full ">
+											<p class="burger-menu__link-text py-[0.6rem] font-['Monrserrat'] font-normal text-[0.9375rem] text-white ">О нас</p>
+											<div href="" class="burger-menu__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0 hidden ">
+												<img src="dist\svg\arrow-right.svg" alt="" class="w-full h-full">
+											</div>
+										</a>
+										<a href="" class="burger-menu__link border-b flex-sb items-center border-color-g w-full ">
+											<p class="burger-menu__link-text py-[0.6rem] font-['Monrserrat'] font-normal text-[0.9375rem] text-white ">Меню</p>
+											<div href="" class="burger-menu__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0 hidden ">
+												<img src="dist\svg\arrow-right.svg" alt="" class="w-full h-full">
+											</div>
+										</a>
+										<a href="" class="burger-menu__link border-b flex-sb items-center border-color-g w-full ">
+											<p class="burger-menu__link-text py-[0.6rem] font-['Monrserrat'] font-normal text-[0.9375rem] text-white ">Как мы работаем</p>
+											<div href="" class="burger-menu__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0 hidden ">
+												<img src="dist\svg\arrow-right.svg" alt="" class="w-full h-full">
+											</div>
+										</a>
+										<a href="" class="burger-menu__link border-b flex-sb items-center border-color-g w-full ">
+											<p class="burger-menu__link-text py-[0.6rem] font-['Monrserrat'] font-normal text-[0.9375rem] text-white ">Как оформить заказ</p>
+											<div href="" class="burger-menu__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0 hidden ">
+												<img src="dist\svg\arrow-right.svg" alt="" class="w-full h-full">
+											</div>
+										</a>
+										<a href="" class="burger-menu__link border-b flex-sb items-center border-color-g w-full ">
+											<p class="burger-menu__link-text py-[0.6rem] font-['Monrserrat'] font-normal text-[0.9375rem] text-white ">Доставка и оплата</p>
+											<div href="" class="burger-menu__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0 hidden ">
+												<img src="dist\svg\arrow-right.svg" alt="" class="w-full h-full">
+											</div>
+										</a>
+									</div>
+									<div class="burger-menu__botom">
+										<div class="burger-menu__contacts lg:order-4 mr-[9.25rem] lg:mr-0 lg:flex-col lg:mt-[3.125rem]">
+											<p class="contacts__title text-white text-[1.125rem]">Контакты</p>
+											<div class="contacts__phone flex mt-[1.0625rem]">
+												<div class="contacts__phone-icon w-[1rem] h-[1rem] mr-[0.625rem]">
+													<img src="dist\svg\phone.svg" alt="" class="w-full h-full">
+												</div>
+												<p class="contacts__phone-number text-white font-['Monrserrat'] font-normal text-[0.9375rem]">+7 (123) 45-67-89</p> 
+											</div>
+					  
+											<div class="burger-menu__social flex mt-[1.375rem] gap-[0.7rem]">
+												<a href="" class="burger-menu__vk icon icon-xl flex-shrink-0">
+													<img src="dist\svg\vk.svg" alt="" class="w-full h-full">
+												</a>
+												<a href="" class="burger-menu__telegram icon icon-xl flex-shrink-0">
+													<img src="dist\svg\telegram.svg" alt="" class="w-full h-full">
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<a href="" class="profile h-[1.4375rem] w-[1.4375rem] md:hidden flex-shrink-0" >
+							<img src="dist\svg\profile.svg" alt="" class="profile-image w-full h-full">
 						</a>
 						<a href="" class="store h-[1.625] w-[1.625rem] md:hidden flex-shrink-0">
-							<img src="dist\svg\store.svg" alt="" class="profile-image w-full h-full md:hidden">
+							<img src="dist\svg\store.svg" alt="" class="profile-image w-full h-full">
 						</a>
 					</div>
 				</div>
@@ -67,8 +138,8 @@
 						<p class="subtitle mt-[1.3125rem] text-base font-normal text-color-h font-['Monrserrat'] leading-[140%] w-[15.875rem] sm:mx-auto sm:w-[23rem] xs:w-[15rem] sm_min:hidden">Сбалансированные рационы питания с доставкой на дом!</p>
 					</div>
 					<div class="first-section__buttons flex-sb w-[21.8125rem] mr-auto mt-[2.125rem] sm:flex-col sm:w-[15.25rem] sm:mx-auto">
-						<a href="" class="first-section__button-order btn btn-color-a diagonal-gradient h-[2.75rem] w-[10.6875rem] shadow-base sm:btn-2xl">Заказать</a>
-						<a href="" class="first-section__button-diet btn btn-color-b diagonal-gradient-border h-[2.75rem] w-[10.6875rem] sm:mt-[0.9375rem] sm:btn-3xl">Подобрать рацион</a>
+						<button href="" class="first-section__button-order btn btn-color-a diagonal-gradient h-[2.75rem] w-[10.6875rem] shadow-base sm:btn-2xl">Заказать</button>
+						<button href="" class="first-section__button-diet btn btn-color-b diagonal-gradient-border h-[2.75rem] w-[10.6875rem] sm:mt-[0.9375rem] sm:btn-3xl">Подобрать рацион</button>
 					</div>
 					<div class="first-section__dishes w-full mr-auto mt-[4.375rem] sm:mt-[6.9375rem]">
 						<p class="dishes__title text-base ">
@@ -223,35 +294,35 @@
 
 				</div>
 			</div>
-			<div class="third-section flex-c flex-col mt-[7.6875rem] sm:mt-[6.9375rem]">
-				<div class="container flex-c flex-col w-[76rem]  md:mt-[4.75rem] lg:w-[61rem] md:w-[45rem] sm:w-[28rem] xs:w-[19rem] xxs:w-[17rem] ">
-					<h2 class="third-section__title  sm:text-lg1 lg_min:w-[29.75rem]">
+			<div class="third-section flex-c flex-col mt-[7.6875rem] md:mt-[4.75rem] sm:mt-[4rem]">
+				<div class="container flex-c flex-col w-[76rem]   lg:w-[61rem] md:w-[45rem] sm:w-[28rem] xs:w-[19rem] xxs:w-[17rem] ">
+					<h2 class="third-section__title  sm:text-lg1 lg_min:w-[29.75rem] text-center">
 						<span class="third-section__title_dark">Почему именно</span>
 						<span class="third-section__title_green text-color-a">мы?</span>
 					</h2>
 					<div class="third-section__we-blocks mt-[4.25rem] grid grid-cols-4 gap-[1.875rem] sm:grid-cols-1 lg:grid-cols-2 lg:gap-[0.9375rem] md:mt-[2.5rem]">
-						<div class="third-section__we-block flex-c flex-col h-[13.625rem] w-[17.25rem] shadow-base rounded-base sm:w-[11.9375rem] sm:h-[9.4375rem]">
+						<div class="third-section__we-block flex-c flex-col py-[1.6875rem] w-[17.25rem] shadow-base rounded-base sm:w-[11.9375rem] sm:py-[1.1875rem]">
 							<div class="we-icon icon icon-5xl sm:icon-xl flex-shrink-0">
 								<img src="dist\svg\products.svg" alt="" class="we-icon w-full h-full "> 
 							</div>
 							<p class="we-block-title mt-[1.625rem] text-[1.125rem] sm:text-sm sm:mt-[1.1875rem]">Лучшие продукты</p>
 							<p class="we-block-subtitle w-[13rem] mt-[0.875rem] text-base font-normal font-['Monrserrat'] text-center sm:text-[0.625rem] sm:w-[10rem]">100% натуральный состав и свежие продукты</p>
 						</div>
-						<div class="third-section__we-block flex-c flex-col h-[13.625rem] w-[17.25rem] shadow-base rounded-base sm:w-[11.9375rem] sm:h-[9.4375rem]">
+						<div class="third-section__we-block flex-c flex-col py-[1.6875rem] w-[17.25rem] shadow-base rounded-base sm:w-[11.9375rem] sm:py-[1.1875rem]">
 							<div class="we-icon icon icon-5xl sm:icon-xl flex-shrink-0">
 								<img src="dist\svg\body.svg" alt="" class="we-icon w-full h-full "> 
 							</div>
 							<p class="we-block-title mt-[1.625rem] text-[1.125rem] sm:text-sm sm:mt-[1.1875rem]">Индивидуальный подход</p>
 							<p class="we-block-subtitle w-[13rem] mt-[0.875rem] text-base font-normal font-['Monrserrat'] text-center sm:text-[0.625rem] sm:w-[10rem]">Подбор программы в соответствии с вашей целью</p>
 						</div>
-						<div class="third-section__we-block flex-c flex-col h-[13.625rem] w-[17.25rem] shadow-base rounded-base sm:w-[11.9375rem] sm:h-[9.4375rem]">
+						<div class="third-section__we-block flex-c flex-col py-[1.6875rem] w-[17.25rem] shadow-base rounded-base sm:w-[11.9375rem] sm:py-[1.1875rem]">
 							<div class="we-icon icon icon-5xl sm:icon-xl flex-shrink-0">
 								<img src="dist\svg\delivery.svg" alt="" class="we-icon w-full h-full "> 
 							</div>
 							<p class="we-block-title mt-[1.625rem] text-[1.125rem] sm:text-sm">Быстрая доставка</p>
 							<p class="we-block-subtitle w-[13rem] mt-[0.875rem] text-base font-normal font-['Monrserrat'] text-center sm:text-[0.625rem] sm:w-[10rem]">Каждый день в удобное для вас время</p>
 						</div>
-						<div class="third-section__we-block flex-c flex-col h-[13.625rem] w-[17.25rem] shadow-base rounded-base sm:w-[11.9375rem] sm:h-[9.4375rem]">
+						<div class="third-section__we-block flex-c flex-col py-[1.6875rem] w-[17.25rem] shadow-base rounded-base sm:w-[11.9375rem] sm:py-[1.1875rem]">
 							<div class="we-icon icon icon-5xl sm:icon-xl flex-shrink-0">
 								<img src="dist\svg\tree.svg" alt="" class="we-icon w-full h-full "> 
 							</div>
@@ -270,12 +341,12 @@
 							<span class="fourth-section__title_dark">который подходит именно вам?</span>
 						</h2>
 						<div class="fourth-section__search-dish mt-[5.625rem] w-full flex-sb lg:hidden">
-							<div class="fourth-section__buttons w-[39.5625rem] flex-sb">
-								<a href="" class="fourth-section__button btn btn-color-c btn-sm w-[6.875rem] font-normal font-['Monrserrat'] ">Салаты</a>
-								<a href="" class="fourth-section__button btn btn-color-c btn-sm w-[6.875rem] font-normal font-['Monrserrat'] ">Гарниры</a>
-								<a href="" class="fourth-section__button btn btn-color-c btn-sm w-[5.25rem] font-normal font-['Monrserrat'] ">Супы</a>
-								<a href="" class="fourth-section__button btn btn-color-c btn-sm w-[9.125rem] font-normal font-['Monrserrat'] ">ПП выпечка</a>
-								<a href="" class="fourth-section__button btn btn-color-c btn-sm w-[7.5625rem] font-normal font-['Monrserrat'] ">Напитки</a>
+							<div class="fourth-section__buttons w-[39.5625rem] flex-sb flex-wrap">
+								<button href="" class="fourth-section__button btn btn-color-c btn-sm w-[6.875rem] font-normal font-['Monrserrat'] ">Салаты</button>
+								<button href="" class="fourth-section__button btn btn-color-c btn-sm w-[6.875rem] font-normal font-['Monrserrat'] ">Гарниры</button>
+								<button href="" class="fourth-section__button btn btn-color-c btn-sm w-[5.25rem] font-normal font-['Monrserrat'] ">Супы</button>
+								<button href="" class="fourth-section__button btn btn-color-c btn-sm w-[9.125rem] font-normal font-['Monrserrat'] ">ПП выпечка</button>
+								<button href="" class="fourth-section__button btn btn-color-c btn-sm w-[7.5625rem] font-normal font-['Monrserrat'] ">Напитки</button>
 							</div>
 							<input type="text" class="fourth-section__input w-[24.6875rem] h-[2.5625rem] border border-color-g bg-[url('dist/svg/search.svg')] bg-[1.25rem] pl-[2.75rem]" placeholder="Название блюда...">
 						</div>
@@ -283,8 +354,8 @@
 				</div>
 				<div class="fourth-section__second">
 					<div class="fourth-section__diet flex-c flex-col lg:flex-col-reverse mt-[2.9375rem] ">
-						<div class="fourth-section__diet-types flex-c text-lg ">
-							<a href="" class="fourth-section__diet-type flex-c w-[12.375rem] h-[3.0625rem] active:border-color-a active:border-b-4 active:border-solid sm:text-sm sm:w-[6.5rem] xs:w-[5.5rem]">
+						<div class="fourth-section__diet-types flex-c flex-wrap text-lg ">
+							<a href="" class="fourth-section__diet-type  flex-c w-[12.375rem] h-[3.0625rem] active:border-color-a active:border-b-4 active:border-solid sm:text-sm sm:w-[6.5rem] xs:w-[5.5rem]">
 								<span class="diet-type">Стандартный</span>
 							</a>
 							<a href="" class="fourth-section__diet-type flex-c w-[12.375rem] h-[3.0625rem] active:border-color-a active:border-b-4 active:border-solid sm:text-sm sm:w-[6.5rem] xs:w-[5.5rem]">
@@ -316,24 +387,24 @@
 								<div class="diet-fiter__days flex-c flex-col lg:order-2">
 									<span class="diet-fiter__days-text">Количество дней</span>
 									<div class="diet-fiter__days-buttons mt-[1.25rem] flex-sb flex-wrap w-[13.4375rem] sm:w-[7.625rem] sm:mt-[0.6875rem]">
-										<a href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">2</a>
-										<a href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">3</a>
-										<a href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">5</a>
-										<a href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">6</a>
-										<a href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">7</a>
+										<button href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">2</button>
+										<button href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">3</button>
+										<button href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">5</button>
+										<button href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">6</button>
+										<button href="" class="first-section__button-diet btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">7</button>
 									</div>
 								</div>
 								<div class="diet-fiter__days flex-c flex-col lg:order-4">
 									<span class="diet-fiter__people-text">Количество персон</span>
 									<div class="diet-fiter__people-buttons mt-[1.25rem] flex-sb flex-wrap w-[7.8125rem] sm:w-[4.375rem] sm:mt-[0.6875rem]">
-										<a href="" class="first-section__button-people btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">1</a>
-										<a href="" class="first-section__button-people btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">2</a>
-										<a href="" class="first-section__button-people btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">3</a>
+										<button href="" class="first-section__button-people btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">1</button>
+										<button href="" class="first-section__button-people btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">2</button>
+										<button href="" class="first-section__button-people btn btn-icon btn-color-c  sm:text-xs1 lg:btn-color-d ">3</button>
 									</div>
 								</div>
 							</div>
 							<div class="diet-fiter__buttons flex-c lg_min:ml-[1.5rem] lg:mt-[1.3125rem]">
-								<a href="" class="diet-fiter__button btn btn-color-a diagonal-gradient w-[10.0625rem] h-[2.4375rem] mr-[1.6875rem] sm:text-xs1 sm:w-[6.125rem] sm:h-[1.5rem] sm:rounded-lg">Подобрать</a>
+								<button href="" class="diet-fiter__button btn btn-color-a diagonal-gradient w-[10.0625rem] h-[2.4375rem] mr-[1.6875rem] sm:text-xs1 sm:w-[6.125rem] sm:h-[1.5rem] sm:rounded-lg">Подобрать</button>
 								<a href="" class="diet-fiter__button flex-c">
 									<span class="more mr-[0.4375rem] underline">Подробнее</span>
 									<img src="dist\svg\arrow-right.svg" alt="" class="arrow icon icon-sm sm:icon-4xl flex-shrink-0">
@@ -375,7 +446,7 @@
 						<p class="fifth-section__price mt-[3rem] text-2xl text-white sm:text-lg sm:mt-[1.9375rem] xxs:mt-[1rem]">от 1 500 ₽</p>
 						
 						<div class="fifth-section__buttons flex items-center mt-[3.0625rem] sm:mt-[1.6875rem]">
-							<a class="fifth-section__button btn btn-color-a diagonal-gradient h-[3.0625rem] w-[13.125rem] shadow-base mr-[2.4375rem] sm:mr-[1.375rem] sm:rounded-lg sm:btn-2xl sm:text-[0.5rem] sm:w-[7.5625rem] sm:h-[1.8125rem]">Заказать</a>
+							<button class="fifth-section__button btn btn-color-a diagonal-gradient h-[3.0625rem] w-[13.125rem] shadow-base mr-[2.4375rem] sm:mr-[1.375rem] sm:rounded-lg sm:btn-2xl sm:text-[0.5rem] sm:w-[7.5625rem] sm:h-[1.8125rem]">Заказать</button>
 							<a href="" class="fifth-section__button flex-c">
 								<span class="more mr-[0.4375rem] text-color-a underline text-[1.125rem] sm:text-[0.5rem] ">Подробнее</span>
 								<img src="dist\svg\arrow-right.svg" alt="" class="arrow icon icon-sm sm:icon-4xl flex-shrink-0">
@@ -407,7 +478,7 @@
 								<span class="dishes-block__price-number text-2xl sm:text-lg1">1 000 ₽</span>
 								<span class="dishes-block__price-day font-['Monrserrat'] text-[1.25rem] font-normal sm:text-base">/ в день</span>
 							</p>
-							<a class="dishes-block__button btn btn-color-a diagonal-gradient mt-[2.6875rem] sm:mt-[1.9375rem] h-[4.375rem] w-[18.4375rem] shadow-base sm:rounded-lg sm:btn-2xl sm:text-[0.9375rem] sm:w-[13.875rem] sm:h-[3.25rem]">Заказать</a>
+							<button class="dishes-block__button btn btn-color-a diagonal-gradient mt-[2.6875rem] sm:mt-[1.9375rem] h-[4.375rem] w-[18.4375rem] shadow-base sm:rounded-lg sm:btn-2xl sm:text-[0.9375rem] sm:w-[13.875rem] sm:h-[3.25rem]">Заказать</button>
 						</div>
 					</div>
 					<div class="sixth-section__dishes-block bg-color-a h-[39.5625rem] w-[23.625rem] border border-color-c shadow-base rounded-[1.25rem] overflow-hidden sm:w-[17.75rem] sm:h-[29.6875rem]">
@@ -421,7 +492,7 @@
 								<span class="dishes-block__price-number text-white text-2xl sm:text-lg1">1 900 ₽</span>
 								<span class="dishes-block__price-day text-white font-['Monrserrat'] text-[1.25rem] font-normal sm:text-[0.9375rem]">/ в день</span>
 							</p>
-							<a class="dishes-block__button btn btn-color-e mt-[2.6875rem] sm:mt-[1.9375rem] h-[4.375rem] w-[18.4375rem] shadow-base sm:rounded-lg sm:btn-2xl sm:text-[0.9375rem] sm:w-[13.875rem] sm:h-[3.25rem] ">Заказать</a>
+							<button class="dishes-block__button btn btn-color-e mt-[2.6875rem] sm:mt-[1.9375rem] h-[4.375rem] w-[18.4375rem] shadow-base sm:rounded-lg sm:btn-2xl sm:text-[0.9375rem] sm:w-[13.875rem] sm:h-[3.25rem] ">Заказать</button>
 						</div>
 					</div>
 					<div class="sixth-section__dishes-block h-[39.5625rem] w-[23.625rem] border border-color-c shadow-base rounded-[1.25rem] overflow-hidden sm:w-[17.75rem] sm:h-[29.6875rem]">
@@ -435,7 +506,7 @@
 								<span class="dishes-block__price-number text-2xl sm:text-lg1">1 200 ₽</span>
 								<span class="dishes-block__price-day font-['Monrserrat'] text-[1.25rem] font-normal sm:text-base">/ в день</span>
 							</p>
-							<a class="dishes-block__button btn btn-color-a diagonal-gradient mt-[2.6875rem] sm:mt-[1.9375rem] h-[4.375rem] w-[18.4375rem] shadow-base sm:rounded-lg sm:btn-2xl sm:text-[0.9375rem] sm:w-[13.875rem] sm:h-[3.25rem]">Заказать</a>
+							<button class="dishes-block__button btn btn-color-a diagonal-gradient mt-[2.6875rem] sm:mt-[1.9375rem] h-[4.375rem] w-[18.4375rem] shadow-base sm:rounded-lg sm:btn-2xl sm:text-[0.9375rem] sm:w-[13.875rem] sm:h-[3.25rem]">Заказать</button>
 						</div>
 					</div>
 				</div>
@@ -448,27 +519,27 @@
 							<span class="seventh-section__title_green text-color-a">заказ</span>
 						</h2>
 						<p class="seventh-section__subtitle font-['Monrserrat'] text-color-h font-medium text-[1.25rem] mt-[2.1875rem] sm:mt[2.375rem] sm:text-base sm:w-[17.875rem]">В любое место и время!</p>
-						<div class="seventh-section__we-blocks mt-[4.625rem] grid grid-cols-3 gap-[1.5rem] lg:grid-cols-1 lg:gap-[0.9375rem] md:mt-[2.5rem]">
-							<div class="seventh-section__we-block flex-c flex-col h-[25.875rem] w-[23.9375rem] shadow-base rounded-base sm:w-[14.6875rem] sm:h-[12.1875rem]">
-								<div class="we-block__top-photo icon icon-2xl sm:icon-3xl flex-shrink-0">
+						<div class="seventh-section__request-blocks mt-[4.625rem] grid grid-cols-3 gap-[1.5rem] lg:grid-cols-1 lg:gap-[0.9375rem] md:mt-[2.5rem]">
+							<div class="seventh-section__request-block flex-c flex-col pt-[2.5rem] pb-[4rem] w-[23.9375rem] shadow-base rounded-base sm:w-[14.6875rem] sm:py-[1.5rem]">
+								<div class="request-block__top-photo icon icon-2xl sm:icon-3xl flex-shrink-0">
 									<img src="dist\svg\task-square.svg" alt="" class="w-full h-full">
 								</div>
-								<p class="we-block-title mt-[4.875rem] text-[1.5rem] sm:text-base sm:mt-[2rem]">Выбираете рацион</p>
-								<p class="we-block-subtitle w-[20.9375rem] mt-[1.625rem] text-[1rem] font-normal font-['Monrserrat'] text-color-h text-center sm:text-[0.5625rem] sm:w-[12.5rem] sm:mt-[0.75rem]">Все блюда разделены по типу: завтраки, салаты, горячие блюда, десерты.</p>
+								<p class="request-block-title mt-[4.875rem] text-[1.5rem] sm:text-base sm:mt-[2rem]">Выбираете рацион</p>
+								<p class="request-block-subtitle w-[20.9375rem] mt-[1.625rem] text-[1rem] font-normal font-['Monrserrat'] text-color-h text-center sm:text-[0.5625rem] sm:w-[12.5rem] sm:mt-[0.75rem]">Все блюда разделены по типу: завтраки, салаты, горячие блюда, десерты.</p>
 							</div>
-							<div class="seventh-section__we-block flex-c flex-col h-[25.875rem] w-[23.9375rem] shadow-base rounded-base sm:w-[14.6875rem] sm:h-[12.1875rem]">
-								<div class="we-block__top-photo icon icon-2xl sm:icon-3xl flex-shrink-0">
-									<img src="dist\svg\truck-tick.svg" alt="" class="we-icon w-full h-full">
+							<div class="seventh-section__request-block flex-c flex-col pt-[2.5rem] pb-[4rem] w-[23.9375rem] shadow-base rounded-base sm:w-[14.6875rem] sm:py-[1.5rem]">
+								<div class="request-block__top-photo icon icon-2xl sm:icon-3xl flex-shrink-0">
+									<img src="dist\svg\truck-tick.svg" alt="" class="request-icon w-full h-full">
 								</div>
-								<p class="we-block-title mt-[4.875rem] text-[1.5rem] sm:text-base sm:mt-[2rem]">Ожидаете курьера</p>
-								<p class="we-block-subtitle w-[20.9375rem] mt-[1.625rem] text-[1rem] font-normal font-['Monrserrat'] text-color-h text-center sm:text-[0.5625rem] sm:w-[12.5rem] sm:mt-[0.75rem]">Доставка рационов осуществляется каждый день в удобное для вас место</p>
+								<p class="request-block-title mt-[4.875rem] text-[1.5rem] sm:text-base sm:mt-[2rem]">Ожидаете курьера</p>
+								<p class="request-block-subtitle w-[20.9375rem] mt-[1.625rem] text-[1rem] font-normal font-['Monrserrat'] text-color-h text-center sm:text-[0.5625rem] sm:w-[12.5rem] sm:mt-[0.75rem]">Доставка рационов осуществляется каждый день в удобное для вас место</p>
 							</div>
-							<div class="seventh-section__we-block flex-c flex-col h-[25.875rem] w-[23.9375rem] shadow-base rounded-base sm:w-[14.6875rem] sm:h-[12.1875rem] sm:mt-[0.75rem]">
-								<div class="we-block__top-photo icon icon-2xl sm:icon-3xl flex-shrink-0">
-									<img src="dist\svg\ep_food.svg" alt="" class="we-icon w-full h-full">
+							<div class="seventh-section__request-block flex-c flex-col pt-[2.5rem] pb-[4rem] w-[23.9375rem] shadow-base rounded-base sm:w-[14.6875rem] sm:py-[1.5rem]">
+								<div class="request-block__top-photo icon icon-2xl sm:icon-3xl flex-shrink-0">
+									<img src="dist\svg\ep_food.svg" alt="" class="request-icon w-full h-full">
 								</div>
-								<p class="we-block-title mt-[4.875rem] text-[1.5rem] sm:text-base sm:mt-[2rem]">Наслаждаетесь</p>
-								<p class="we-block-subtitle w-[20.9375rem] mt-[1.625rem] text-[1rem] font-normal font-['Monrserrat'] text-color-h text-center sm:text-[0.5625rem] sm:w-[12.5rem] sm:mt-[0.75rem]">Приятного аппетита!</p>
+								<p class="request-block-title mt-[4.875rem] text-[1.5rem] sm:text-base sm:mt-[2rem]">Наслаждаетесь</p>
+								<p class="request-block-subtitle w-[20.9375rem] mt-[1.625rem] text-[1rem] font-normal font-['Monrserrat'] text-color-h text-center sm:text-[0.5625rem] sm:w-[12.5rem] sm:mt-[0.75rem]">Приятного аппетита!</p>
 							</div>
 						</div>
 					</div>
@@ -522,7 +593,7 @@
 								</h1>
 								<p class="ninth-section__subtitle text-color-a text-[1.5rem] font-['Monrserrat'] font-medium mt-[0.625rem] sm:mt-[1.25rem] md:mt-[2rem] sm:text-[0.94rem]">6 блюд на двоих </p>
 								<p class="ninth-section__subtitle text-white text-[2rem] font-['Monrserrat'] mt-[0.625rem] sm:text-[1.1875rem] sm:mt-[1.25rem] md:mt-[2rem]">1 500 ₽/день</p>
-								<a href="" class="first-section__button-order btn btn-color-a diagonal-gradient mt-[0.625rem] h-[2.75rem] w-[10.6875rem] shadow-base sm:btn-2xl sm:mt-[1.25rem] md:mt-[2rem] md:w-[25rem] md:h-[6rem] md:text-[1.7rem]">Заказать</a>
+								<button href="" class="first-section__button-order btn btn-color-a diagonal-gradient mt-[0.625rem] h-[2.75rem] w-[10.6875rem] shadow-base sm:btn-2xl sm:mt-[1.25rem] md:mt-[2rem] md:w-[25rem] md:h-[6rem] md:text-[1.7rem]">Заказать</button>
 							</div>
 						</div>
 					</div>
@@ -587,41 +658,41 @@
 						<span class="eleventh-section__title_dark">Часто задаваемые</span>
 						<span class="eleventh-section__title_green text-color-a">вопросы</span>
 					</h2>
-					<div class="eleventh-section__buttons flex-sb w-[38.125rem] mt-[3.875rem]">
-						<a href="" class="fourth-section__button btn btn-color-c btn-sm w-[11.4375rem] font-normal font-['Monrserrat'] ">Доставка</a>
-						<a href="" class="fourth-section__button btn btn-color-c btn-sm w-[11.4375rem] font-normal font-['Monrserrat'] ">Питание</a>
-						<a href="" class="fourth-section__button btn btn-color-c btn-sm w-[11.4375rem] font-normal font-['Monrserrat'] ">Результаты</a>
+					<div class="eleventh-section__buttons flex-sb flex-wrap w-[38.125rem] mt-[3.875rem]">
+						<button href="" class="fourth-section__button btn btn-color-c btn-sm w-[11.4375rem] font-normal font-['Monrserrat'] ">Доставка</button>
+						<button href="" class="fourth-section__button btn btn-color-c btn-sm w-[11.4375rem] font-normal font-['Monrserrat'] ">Питание</button>
+						<button href="" class="fourth-section__button btn btn-color-c btn-sm w-[11.4375rem] font-normal font-['Monrserrat'] ">Результаты</button>
 					</div>
 					<div class="eleventh-section__content mt-[5.5625rem]">
 						<div class="eleventh-section__answer border-t flex-sb border-color-g w-[54.875rem] px-[2.625rem]">
 							<p class="eleventh-section__answer-text py-[1.4375rem] font-['Monrserrat'] font-normal text-[1.75rem]">Какая программа подойдет лично мне?</p>
-							<a href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
+							<button href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
 								<img src="dist\svg\arrow-down.svg" alt="" class="w-full h-full">
-							</a>
+							</button>
 						</div>
 						<div class="eleventh-section__answer border-t flex-sb border-color-g w-[54.875rem] px-[2.625rem]">
 							<p class="eleventh-section__answer-text py-[1.4375rem] font-['Monrserrat'] font-normal text-[1.75rem]">Можно ли подогревать блюда в контейнерах?</p>
-							<a href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
+							<button href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
 								<img src="dist\svg\arrow-down.svg" alt="" class="w-full h-full">
-							</a>
+							</button>
 						</div>
 						<div class="eleventh-section__answer border-t flex-sb border-color-g w-[54.875rem] px-[2.625rem]">
 							<p class="eleventh-section__answer-text py-[1.4375rem] font-['Monrserrat'] font-normal text-[1.75rem]">Как готовятся блюда?</p>
-							<a href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
+							<button href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
 								<img src="dist\svg\arrow-down.svg" alt="" class="w-full h-full">
-							</a>
+							</button>
 						</div>
 						<div class="eleventh-section__answer border-t flex-sb border-color-g w-[54.875rem] px-[2.625rem]">
 							<p class="eleventh-section__answer-text py-[1.4375rem] font-['Monrserrat'] font-normal text-[1.75rem]">Срок хранения наших блюд</p>
-							<a href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
+							<button href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
 								<img src="dist\svg\arrow-down.svg" alt="" class="w-full h-full">
-							</a>
+							</button>
 						</div>
 						<div class="eleventh-section__answer border-t flex-sb border-color-g w-[54.875rem] px-[2.625rem]">
 							<p class="eleventh-section__answer-text py-[1.4375rem] font-['Monrserrat'] font-normal text-[1.75rem]">Консультации специалистов</p>
-							<a href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
+							<button href="" class="eleventh-section__arrow w-[1.0625rem] h-[1.0625rem] flex-shrink-0">
 								<img src="dist\svg\arrow-down.svg" alt="" class="w-full h-full">
-							</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -630,7 +701,7 @@
 		<footer class="footer mt-[5.8125rem] sm:mt-[11.4375rem] flex-c flex-col bg-color-e w-full">
 			<div class="container flex-c flex-col w-[76rem]  lg:w-[61rem] md:w-[45rem] sm:w-[28rem] xs:w-[19rem] xxs:w-[17rem] ">
 				<div class="footer__content flex-c flex-col mt-[4.875rem]">
-					<div class="footer__top flex-c lg:flex-col">
+					<div class="footer__top flex lg:flex-c lg:flex-col">
 						<div class="footer__contacts lg:order-4 mr-[9.25rem] lg:mr-0 lg:flex-c lg:flex-col lg:mt-[3.125rem]">
 							<p class="contacts__title text-white text-[1.125rem]">+7 (123) 45-67-89</p>
 							<a href="" class="contacts__call mt-[0.875rem] text-color-a underline font-normal font-['Monrserrat'] text-[0.9375rem]">Заказать обратный звонок</a>
@@ -643,7 +714,7 @@
 								</a>
 							</div>
 						</div>
-						<div class="footer__questions flex lg:flex-c flex-col mr-[8.125rem] lg:mr-0 lg:order-2 lg:mt-[3.125rem] w-[13rem]">
+						<div class="footer__questions flex lg:flex-c flex-col mr-[8.125rem] lg:mr-0 lg:order-2 lg:mt-[3.125rem] max-w-[13rem]">
 							<p class="contacts__title  text-white ">Вопросы</p>
 							<div class="list gap-[1rem] mt-[1.5rem] flex lg:flex-c flex-col">
 								<a href="" class="list__item font-normal font-['Monrserrat'] text-[0.9375rem] text-white">Оплата</a>
@@ -652,12 +723,12 @@
 								<a href="" class="list__item font-normal font-['Monrserrat'] text-[0.9375rem] text-white">Отзывы</a>
 							</div>
 						</div>
-						<div class="footer__support mr-[6.1875rem] lg:order-3 flex lg:flex-c flex-col w-[13rem] lg:mr-0 lg:mt-[3.125rem]" >
+						<div class="footer__support mr-[6.1875rem] lg:order-3 flex lg:flex-c flex-col max-w-[13rem] lg:mr-0 lg:mt-[3.125rem]" >
 							<p class="support__title  text-white ">Поддержка</p>
 							<div class="list gap-[1rem] mt-[1.5rem]  flex lg:flex-c flex-col">
 								<a href="" class="list__item font-normal font-['Monrserrat'] text-[0.9375rem] text-white">Оферта</a>
 								<a href="" class="list__item font-normal font-['Monrserrat'] text-[0.9375rem] text-white">Контакты</a>
-								<a href="" class="list__item font-normal font-['Monrserrat'] text-[0.9375rem] text-white text-center">Политика конфиденциальности</a>
+								<a href="" class="list__item font-normal font-['Monrserrat'] text-[0.9375rem] text-white lg:text-center">Политика конфиденциальности</a>
 							</div>
 						</div>
 						<div class="footer__mailing lg:order-1 ">
@@ -665,7 +736,7 @@
 							<p class="mailing__text font-normal font-['Monrserrat'] text-[0.9375rem] mt-[1rem] text-white">Подпишитесь на рассылку новостей</p>
 							<div class="mailing__input-group w-[21rem] sm:w-[18rem] h-[2.4375rem] relative rounded-[0.625rem] mt-[1.75rem]">
 								<input type="text" class="mailing__input rounded-[0.625rem] absolute w-full h-full border border-color-g pl-[1rem] bg-color-h bg-opacity-20 text-[0.875rem]" placeholder="Введите E-mail">
-								<a href="" class="mailing__input-button absolute w-[6.25rem] h-[1.8125rem] top-[0.3125rem] rounded-[0.625rem] right-[0.3125rem] btn btn-color-a diagonal-gradient text-sm font-normal font-['Monrserrat']">Отправить</a>
+								<button href="" class="mailing__input-button absolute w-[6.25rem] h-[1.8125rem] top-[0.3125rem] rounded-[0.625rem] right-[0.3125rem] btn btn-color-a diagonal-gradient text-sm font-normal font-['Monrserrat']">Отправить</button>
 							</div>
 						</div>
 					</div>
